@@ -858,7 +858,7 @@ If the parent heading has no more content delete it is well."
                   (unless (save-excursion
                             (goto-char (1- (cadr x)))
                             (org-goto-first-child))
-                    (kill-region (car x) (cadr x))))
+                    (message "%s" x)(kill-region (car x) (cadr x))))
                 (reverse entries))))))
 
 (defun org-journal--carryover ()
