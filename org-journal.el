@@ -261,6 +261,10 @@ Set this to `find-file' if you don't want org-journal to split your window."
 See agenda tags view match description for the format of this."
   :type 'string)
 
+(defcustom org-journal-carryover-items-delete t
+  "If nil, won't delete todo during carryover."
+  :type 'boolean)
+
 (defcustom org-journal-skip-carryover-drawers nil
   "By default, we carry over all the drawers associated with the items.
 
@@ -848,13 +852,14 @@ If the parent heading has no more content delete it is well."
     (outline-end-of-subtree)
 
     ;; Delete carried over items
-    (with-current-buffer prev-buffer
-      (mapc (lambda (x)
-              (unless (save-excursion
-                        (goto-char (1- (cadr x)))
-                        (org-goto-first-child))
-                (kill-region (car x) (cadr x))))
-            (reverse entries)))))
+    (when org-journal-carryover-items-delete
+        (with-current-buffer prev-buffer
+          (mapc (lambda (x)
+                  (unless (save-excursion
+                            (goto-char (1- (cadr x)))
+                            (org-goto-first-child))
+                    (kill-region (car x) (cadr x))))
+                (reverse entries))))
 
 (defun org-journal--carryover ()
   "Moves all items matching `org-journal-carryover-items' from the
