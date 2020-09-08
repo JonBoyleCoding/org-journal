@@ -859,7 +859,7 @@ If the parent heading has no more content delete it is well."
                             (goto-char (1- (cadr x)))
                             (org-goto-first-child))
                     (kill-region (car x) (cadr x))))
-                (reverse entries))))
+                (reverse entries))))))
 
 (defun org-journal--carryover ()
   "Moves all items matching `org-journal-carryover-items' from the
