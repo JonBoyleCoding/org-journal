@@ -675,7 +675,7 @@ hook is run."
         (message "Before Header")
         (let (header-already-created (when (search-forward entry-header nil t) (t)))
         (message "Header %s" header-already-created)
-        (unless (header-already-created)
+        (unless header-already-created
           (message "Creating Header")
           ;; Insure we insert the new journal header at the correct location
           (unless (org-journal--daily-p)
