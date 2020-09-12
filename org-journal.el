@@ -710,7 +710,7 @@ hook is run."
       (org-journal--decrypt)
 
       ;; Move TODOs from previous day to new entry
-      (unless already_created
+      (unless header-already-created
         (when (and org-journal-carryover-items
                         (not (string-blank-p org-journal-carryover-items))
                         (string= entry-path (org-journal--get-entry-path (current-time))))
