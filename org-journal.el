@@ -666,7 +666,6 @@ hook is run."
       (let header-already-created (when (search-forward entry-header nil t) (setq header-already-created t)))
       (message "Header %s" (if header-already-created ("Created") ("Not Created")))
 
-
       ;; Create new journal entry if there isn't one.
       (let ((entry-header
              (if (functionp org-journal-date-format)
