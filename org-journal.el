@@ -649,7 +649,6 @@ hook is run."
       ;; Insure `view-mode' is not active
       (view-mode -1)
 
-      (setq header-already-created nil)
 
       ;; Insert org-journal-file-header
       (when (and (or (functionp org-journal-file-header)
@@ -664,8 +663,7 @@ hook is run."
             (org-ctrl-c-ctrl-c))))
 
       (goto-char (point-min))
-      (when (search-forward entry-header nil t) (setq header-already-created t))
-
+      (let header-already-created (when (search-forward entry-header nil t) (setq header-already-created t)))
       (message "Header %s" (if header-already-created ("Created") ("Not Created")))
 
       ;; Create new journal entry if there isn't one.
