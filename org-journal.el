@@ -664,6 +664,8 @@ hook is run."
             (org-ctrl-c-ctrl-c))))
         (setq header-already-created t))
 
+      (message "%s" header-already-created)
+
       ;; Create new journal entry if there isn't one.
       (let ((entry-header
              (if (functionp org-journal-date-format)
