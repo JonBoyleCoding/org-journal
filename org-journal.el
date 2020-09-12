@@ -672,6 +672,7 @@ hook is run."
                (concat org-journal-date-prefix
                        (format-time-string org-journal-date-format time)))))
         (goto-char (point-min))
+        (message "Before Header")
         (let header-already-created (when (search-forward entry-header nil t) (setq header-already-created t)))
         (message "Header %s" header-already-created)
         (unless (header-already-created)
