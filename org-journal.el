@@ -705,12 +705,13 @@ hook is run."
           (when org-journal-enable-encryption
             (unless (member org-crypt-tag-matcher (org-get-tags))
               (org-set-tags org-crypt-tag-matcher)))
-          (run-hooks 'org-journal-after-header-create-hook))
+          (run-hooks 'org-journal-after-header-create-hook)
                 ;; Move TODOs from previous day to new entry
+          (unless org-journal-carryover-items-delete
                 (when (and org-journal-carryover-items
                                 (not (string-blank-p org-journal-carryover-items))
                                 (string= entry-path (org-journal--get-entry-path (current-time))))
-                                (org-journal--carryover)))
+                                (org-journal--carryover)))))
       (org-journal--decrypt)
 
 
