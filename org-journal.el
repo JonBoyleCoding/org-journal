@@ -657,10 +657,10 @@ hook is run."
         (insert (if (functionp org-journal-file-header)
                     (funcall org-journal-file-header time)
                   (format-time-string org-journal-file-header time)))
-        ((save-excursion
+        (save-excursion
           (when (re-search-backward "^#\\+" nil t)
             (org-ctrl-c-ctrl-c)))
-         (setq already_created t))))
+        (setq already_created t)))
 
       ;; Create new journal entry if there isn't one.
       (let ((entry-header
