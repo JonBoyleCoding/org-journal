@@ -672,11 +672,7 @@ hook is run."
                (concat org-journal-date-prefix
                        (format-time-string org-journal-date-format time)))))
         (goto-char (point-min))
-        (message "Before Header")
-        (let (header-already-created (when (search-forward entry-header nil t) (t)))
-        (message "Header %s" header-already-created)
-        (unless header-already-created
-          (message "Creating Header")
+        (when (search-forward entry-header nil t)
           ;; Insure we insert the new journal header at the correct location
           (unless (org-journal--daily-p)
             (let ((date (decode-time time))
@@ -714,7 +710,7 @@ hook is run."
                 (when (and org-journal-carryover-items
                                 (not (string-blank-p org-journal-carryover-items))
                                 (string= entry-path (org-journal--get-entry-path (current-time))))
-                                (org-journal--carryover)))))
+                                (org-journal--carryover))))
       (org-journal--decrypt)
 
 
