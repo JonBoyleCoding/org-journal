@@ -649,18 +649,20 @@ hook is run."
       ;; Insure `view-mode' is not active
       (view-mode -1)
 
+      (setq header-already-created nil)
+
       ;; Insert org-journal-file-header
-      (let ((already_created nil)) (when (and (or (functionp org-journal-file-header)
+      (if (and (or (functionp org-journal-file-header)
                      (and (stringp org-journal-file-header)
                           (not (string-empty-p org-journal-file-header))))
                  (= (buffer-size) 0))
-        (insert (if (functionp org-journal-file-header)
+        ((insert (if (functionp org-journal-file-header)
                     (funcall org-journal-file-header time)
                   (format-time-string org-journal-file-header time)))
         (save-excursion
           (when (re-search-backward "^#\\+" nil t)
-            (org-ctrl-c-ctrl-c)))
-        (setq already_created t)))
+            (org-ctrl-c-ctrl-c))))
+        (setq header-already-created t))
 
       ;; Create new journal entry if there isn't one.
       (let ((entry-header
