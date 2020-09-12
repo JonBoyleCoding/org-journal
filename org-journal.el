@@ -673,10 +673,10 @@ hook is run."
                (concat org-journal-date-prefix
                        (format-time-string org-journal-date-format time)))))
         (goto-char (point-min))
-        (if (search-forward entry-header nil t)
-            (setq header-already-created t)
+        (when (search-forward entry-header nil t) (setq header-already-created t))
+        (unless (header-already-created)
           ;; Insure we insert the new journal header at the correct location
-          ((unless (org-journal--daily-p)
+          (unless (org-journal--daily-p)
             (let ((date (decode-time time))
                   (dates (sort (org-journal--file->calendar-dates (buffer-file-name))
                                (lambda (a b)
@@ -707,7 +707,7 @@ hook is run."
           (when org-journal-enable-encryption
             (unless (member org-crypt-tag-matcher (org-get-tags))
               (org-set-tags org-crypt-tag-matcher)))
-          (run-hooks 'org-journal-after-header-create-hook))))
+          (run-hooks 'org-journal-after-header-create-hook)))
       (org-journal--decrypt)
 
       (message "Header %s" (if header-already-created ("Created") ("Not Created")))
