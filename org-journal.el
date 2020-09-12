@@ -652,19 +652,17 @@ hook is run."
       (setq header-already-created nil)
 
       ;; Insert org-journal-file-header
-      (if (and (or (functionp org-journal-file-header)
+      (when (and (or (functionp org-journal-file-header)
                      (and (stringp org-journal-file-header)
                           (not (string-empty-p org-journal-file-header))))
                  (= (buffer-size) 0))
-        ((insert (if (functionp org-journal-file-header)
+        (insert (if (functionp org-journal-file-header)
                     (funcall org-journal-file-header time)
                   (format-time-string org-journal-file-header time)))
         (save-excursion
           (when (re-search-backward "^#\\+" nil t)
             (org-ctrl-c-ctrl-c))))
-        (setq header-already-created t))
 
-      (message "%s" header-already-created)
 
       ;; Create new journal entry if there isn't one.
       (let ((entry-header
@@ -675,9 +673,10 @@ hook is run."
                (concat org-journal-date-prefix
                        (format-time-string org-journal-date-format time)))))
         (goto-char (point-min))
-        (unless (search-forward entry-header nil t)
+        (if (search-forward entry-header nil t)
+            (setq header-already-created t)
           ;; Insure we insert the new journal header at the correct location
-          (unless (org-journal--daily-p)
+          ((unless (org-journal--daily-p)
             (let ((date (decode-time time))
                   (dates (sort (org-journal--file->calendar-dates (buffer-file-name))
                                (lambda (a b)
@@ -708,8 +707,10 @@ hook is run."
           (when org-journal-enable-encryption
             (unless (member org-crypt-tag-matcher (org-get-tags))
               (org-set-tags org-crypt-tag-matcher)))
-          (run-hooks 'org-journal-after-header-create-hook)))
+          (run-hooks 'org-journal-after-header-create-hook))))
       (org-journal--decrypt)
+
+      (message "Header %s" (if header-already-created ("Created") ("Not Created")))
 
       ;; Move TODOs from previous day to new entry
       (unless header-already-created
