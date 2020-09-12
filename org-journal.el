@@ -666,6 +666,8 @@ hook is run."
       (goto-char (point-min))
       (when (search-forward entry-header nil t) (setq header-already-created t))
 
+      (message "Header %s" (if header-already-created ("Created") ("Not Created")))
+
       ;; Create new journal entry if there isn't one.
       (let ((entry-header
              (if (functionp org-journal-date-format)
@@ -710,7 +712,6 @@ hook is run."
           (run-hooks 'org-journal-after-header-create-hook)))
       (org-journal--decrypt)
 
-      (message "Header %s" (if header-already-created ("Created") ("Not Created")))
 
       ;; Move TODOs from previous day to new entry
       (unless header-already-created
