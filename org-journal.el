@@ -689,7 +689,7 @@ hook is run."
                   (insert "\n")
                   (setq match t
                         dates nil))
-                (setq dates (cdr dates)))))
+                (setq dates (cdr dates))))
           ;; True if entry must be inserted at the end of the journal file.
           (unless match
             (goto-char (point-max))
@@ -707,7 +707,7 @@ hook is run."
           (when org-journal-enable-encryption
             (unless (member org-crypt-tag-matcher (org-get-tags))
               (org-set-tags org-crypt-tag-matcher)))
-          (run-hooks 'org-journal-after-header-create-hook))))
+          (run-hooks 'org-journal-after-header-create-hook)))))
       (org-journal--decrypt)
 
       (message "Header %s" (if header-already-created ("Created") ("Not Created")))
