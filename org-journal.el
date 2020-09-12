@@ -663,6 +663,8 @@ hook is run."
           (when (re-search-backward "^#\\+" nil t)
             (org-ctrl-c-ctrl-c))))
 
+      (goto-char (point-min))
+      (when (search-forward entry-header nil t) (setq header-already-created t))
 
       ;; Create new journal entry if there isn't one.
       (let ((entry-header
@@ -672,8 +674,6 @@ hook is run."
                  (user-error "org-journal-date-format is empty, this won't work"))
                (concat org-journal-date-prefix
                        (format-time-string org-journal-date-format time)))))
-        (goto-char (point-min))
-        (when (search-forward entry-header nil t) (setq header-already-created t))
         (unless (header-already-created)
           ;; Insure we insert the new journal header at the correct location
           (unless (org-journal--daily-p)
