@@ -664,7 +664,7 @@ hook is run."
 
 
       ;; Create new journal entry if there isn't one.
-      (let ((entry-header
+   (let ((entry-header
              (if (functionp org-journal-date-format)
                  (funcall org-journal-date-format time)
                (when (string-empty-p org-journal-date-format)
@@ -672,7 +672,7 @@ hook is run."
                (concat org-journal-date-prefix
                        (format-time-string org-journal-date-format time)))))
         (goto-char (point-min))
-        (when (search-forward entry-header nil t)
+        (unless (search-forward entry-header nil t)
           ;; Insure we insert the new journal header at the correct location
           (unless (org-journal--daily-p)
             (let ((date (decode-time time))
@@ -705,12 +705,12 @@ hook is run."
           (when org-journal-enable-encryption
             (unless (member org-crypt-tag-matcher (org-get-tags))
               (org-set-tags org-crypt-tag-matcher)))
-          (run-hooks 'org-journal-after-header-create-hook)
+          (run-hooks 'org-journal-after-header-create-hook))
                 ;; Move TODOs from previous day to new entry
                 (when (and org-journal-carryover-items
                                 (not (string-blank-p org-journal-carryover-items))
                                 (string= entry-path (org-journal--get-entry-path (current-time))))
-                                (org-journal--carryover))))
+                                (org-journal--carryover)))
       (org-journal--decrypt)
 
 
