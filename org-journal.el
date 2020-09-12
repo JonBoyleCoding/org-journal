@@ -650,16 +650,17 @@ hook is run."
       (view-mode -1)
 
       ;; Insert org-journal-file-header
-      (when (and (or (functionp org-journal-file-header)
+      (let (already_created) (when (and (or (functionp org-journal-file-header)
                      (and (stringp org-journal-file-header)
                           (not (string-empty-p org-journal-file-header))))
                  (= (buffer-size) 0))
         (insert (if (functionp org-journal-file-header)
                     (funcall org-journal-file-header time)
                   (format-time-string org-journal-file-header time)))
-        (save-excursion
+        ((save-excursion
           (when (re-search-backward "^#\\+" nil t)
-            (org-ctrl-c-ctrl-c))))
+            (org-ctrl-c-ctrl-c)))
+         (setq already_created t))))
 
       ;; Create new journal entry if there isn't one.
       (let ((entry-header
@@ -707,10 +708,11 @@ hook is run."
       (org-journal--decrypt)
 
       ;; Move TODOs from previous day to new entry
+      (unless already_created
       (when (and org-journal-carryover-items
                  (not (string-blank-p org-journal-carryover-items))
                  (string= entry-path (org-journal--get-entry-path (current-time))))
-        (org-journal--carryover))
+        (org-journal--carryover)))
 
       (if (org-journal--org-heading-p)
           (outline-end-of-subtree)
