@@ -706,6 +706,7 @@ hook is run."
             (unless (member org-crypt-tag-matcher (org-get-tags))
               (org-set-tags org-crypt-tag-matcher)))
           (run-hooks 'org-journal-after-header-create-hook)
+          (message "Handling carryover")
                 ;; Move TODOs from previous day to new entry
         (when (and org-journal-carryover-items
                         (not (string-blank-p org-journal-carryover-items))
