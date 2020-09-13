@@ -1,0 +1,278 @@
+
+/home/jonathan/MyRepos/org-journal/.github/ISSUE_TEMPLATE/bug_report.md,0
+
+/home/jonathan/MyRepos/org-journal/.github/ISSUE_TEMPLATE/feature_request.md,0
+
+/home/jonathan/MyRepos/org-journal/.travis.yml,0
+
+/home/jonathan/MyRepos/org-journal/CHANGELOG,0
+
+/home/jonathan/MyRepos/org-journal/CONTRIBUTORS,0
+
+/home/jonathan/MyRepos/org-journal/LICENSE,0
+
+/home/jonathan/MyRepos/org-journal/Makefile,114
+EMACS=emacsEMACS1,0
+all: clean compile testall3,13
+test:test5,38
+compile:compile8,122
+clean:clean11,214
+
+/home/jonathan/MyRepos/org-journal/README.org,0
+
+/home/jonathan/MyRepos/org-journal/org-journal-test.el,239
+(defvar org-journal-dir-test (make-temp-file "org-journal-" t))org-journal-dir-test13,256
+(defun org-journal-dir-test-setup ()org-journal-dir-test-setup15,321
+(defmacro org-journal-test-macro (&rest body)org-journal-test-macro23,641
+
+/home/jonathan/MyRepos/org-journal/org-journal.svg,6370
+   inkscape:export-ydpi="11.14">dc22,850
+   inkscape:export-ydpi="11.14">cc22,850
+   inkscape:export-ydpi="11.14">rdf22,850
+   inkscape:export-ydpi="11.14">svg22,850
+   inkscape:export-ydpi="11.14">nsc9fc6719010122,850
+   inkscape:export-ydpi="11.14">xlink22,850
+   inkscape:export-ydpi="11.14">sodipodi22,850
+   inkscape:export-ydpi="11.14">inkscape22,850
+   inkscape:export-ydpi="11.14">svg222,850
+     id="title1157">Org-Journal icon</title>title115724,892
+     id="defs4">defs426,945
+       style="color-interpolation-filters:sRGB">filter378834,1101
+       style="color-interpolation-filters:sRGB">filter378834,1101
+         inkscape:collect="always" />feGaussianBlur379038,1235
+       gradientTransform="matrix(0.41341,0,0,0.3501612,-127.93,-40.076715)">linearGradient414348,1494
+       gradientTransform="matrix(0.41341,0,0,0.3501612,-127.93,-40.076715)">linearGradient414348,1494
+         offset="0" />stop401352,1662
+         offset="1" />stop401556,1771
+       id="clipPath1091">clipPath109160,1868
+       id="clipPath1091">clipPath109160,1868
+         y="165.2556" />rect109367,2148
+       id="clipPath1098">clipPath109871,2241
+       id="clipPath1098">clipPath109871,2241
+         y="165.2556" />rect110078,2521
+       y2="476.35999" />linearGradient110289,2863
+       y2="476.35999" />linearGradient110289,2863
+       y2="476.35999" />linearGradient117899,3189
+       y2="476.35999" />linearGradient117899,3189
+     inkscape:snap-global="true" />base129,4046
+     style="display:inline">layer1135,4214
+       rx="8.2322903" />rect4055144,4494
+       rx="1.9438539" />rect4019153,4750
+       id="rect4021" />rect4021158,5176
+       id="path4026" />path4026163,5595
+       id="path4032" />path4032168,6013
+       rx="8.2322893" />rect2985177,6266
+       id="rect3983" />rect3983183,6624
+       rx="8.2322893" />rect4009192,6879
+       rx="8.2322893" />rect4053201,7135
+     style="display:inline">layer4208,7301
+       id="g1155">g1155210,7337
+         id="g1365">g1365212,7365
+           id="path3823" />path3823218,7553
+           id="path3825" />path3825231,8192
+           id="path3827" />path3827244,8892
+         id="g1360">g1360247,8940
+           id="path3831" />path3831253,9128
+           id="path3833" />path3833266,9767
+           id="path3835" />path3835279,10425
+         id="g1355">g1355282,10473
+           id="path3839" />path3839288,10661
+           id="path3841" />path3841301,11299
+           id="path3843" />path3843314,11957
+         id="g1350">g1350317,12005
+           id="path3847" />path3847323,12193
+           id="path3849" />path3849336,12831
+           id="path3851" />path3851349,13489
+         id="g1345">g1345352,13537
+           id="path3855" />path3855358,13724
+           id="path3857" />path3857371,14363
+           id="path3859" />path3859384,15021
+         id="g1340">g1340387,15069
+           id="path3863" />path3863393,15257
+           id="path3865" />path3865406,15898
+           id="path3867" />path3867419,16556
+         id="g1335">g1335422,16604
+           id="path3871" />path3871428,16792
+           id="path3873" />path3873441,17430
+           id="path3875" />path3875454,18088
+         id="g1330">g1330457,18136
+           id="path3879" />path3879463,18324
+           id="path3881" />path3881476,18961
+           id="path3883" />path3883489,19619
+         id="g1325">g1325492,19667
+           id="path3887" />path3887498,19855
+           id="path3889" />path3889511,20489
+           id="path3891" />path3891524,21147
+         id="g1320">g1320527,21195
+           id="path3895" />path3895533,21383
+           id="path3897" />path3897546,22018
+           id="path3899" />path3899559,22676
+         id="g1315">g1315562,22724
+           id="path3903" />path3903568,22912
+           id="path3905" />path3905581,23548
+           id="path3907" />path3907594,24206
+         id="g1310">g1310597,24254
+           id="path3911" />path3911603,24442
+           id="path3913" />path3913616,25078
+           id="path3915" />path3915629,25736
+         r="2.2679095" />path3815636,25932
+         sodipodi:start="0.67797216" />path3817649,26527
+         sodipodi:start="0.67797216" />path3819662,27158
+       style="fill:#551400;fill-opacity:1;stroke:none;stroke-width:18.72900009;stroke-miterlimitrect1086670,27331
+       rx="8.2322893" />rect1095681,27822
+       rx="8.2325239" />rect1088692,28205
+     transform="translate(-6.2823358,-37.055724)">layer2699,28349
+       transform="matrix(0.6897526,0,0,0.6897526,27.693509,51.007642)">g183702,28424
+         style="fill:#a04d32;stroke:#000000;stroke-width:3" />path117707,30767
+         style="fill:#77aa99;stroke:#000000;stroke-width:0.5" />path119712,31802
+         style="fill:#314b49;stroke:#314b49;stroke-width:0.75;stroke-linecap:round;stroke-linejopath121717,32201
+         style="fill:#314b49;stroke:#314b49;stroke-width:0.5" />path123722,32683
+         style="fill:#314b49" />path125727,33006
+         style="fill:#314b49" />path127732,33285
+         style="fill:#314b49" />path129737,33544
+         style="fill:#a04d32;stroke:#000000;stroke-width:0.5" />path131742,35131
+         style="fill:#796958;stroke:#000000;stroke-width:0.5" />path133747,35872
+         style="fill:#ffffff" />path135752,36149
+         style="fill:#ffffff" />path137757,36396
+         style="fill:#ffffff" />path139762,36639
+         style="fill:#ffffff" />path141767,36888
+         style="fill:#ffffff" />path143772,37136
+         style="fill:#ffffff" />path145777,37386
+         style="fill:#a04d32;stroke:#000000;stroke-width:0.5" />path147782,37953
+         style="opacity:0.26000001" />path149787,38230
+         style="opacity:0.26000001" />path151792,38638
+         style="opacity:0.18000004;fill:#ffffff" />path153797,39468
+         style="opacity:0.27000002;fill:#ffffff" />path155802,39757
+     style="display:inline">layer3810,39965
+       id="g234">g234812,40001
+         x="41.956955" />rect3986821,40325
+         style="opacity:0.23474001">g4004825,40451
+           x="472.89001" />rect3988835,40724
+           x="472.54999" />rect3990845,40988
+         x="46.583012" />rect3994854,41287
+     id="metadata93">metadata93858,41341
+
+/home/jonathan/MyRepos/org-journal/org-journal.el,10570
+(defvar view-exit-action)view-exit-action75,3272
+(defgroup org-journal nilorg-journal104,4353
+(defface org-journal-highlightorg-journal-highlight110,4481
+(defun org-journal-highlight (str)org-journal-highlight114,4600
+(defface org-journal-calendar-entry-faceorg-journal-calendar-entry-face120,4839
+(defface org-journal-calendar-scheduled-faceorg-journal-calendar-scheduled-face124,4998
+(defcustom org-journal-file-type 'dailyorg-journal-file-type128,5168
+(defcustom org-journal-start-on-weekday 1org-journal-start-on-weekday140,5650
+(defcustom org-journal-dir "~/Documents/journal/"org-journal-dir154,6072
+(defcustom org-journal-file-format "%Y%m%d"org-journal-file-format159,6201
+(defcustom org-journal-date-format "%A, %x"org-journal-date-format178,7077
+(defcustom org-journal-search-result-date-format "%A, %x"org-journal-search-result-date-format189,7474
+(defcustom org-journal-date-prefix "* "org-journal-date-prefix196,7717
+(defcustom org-journal-time-format "%R "org-journal-time-format207,8197
+(defcustom org-journal-time-format-post-midnight ""org-journal-time-format-post-midnight213,8377
+(defcustom org-journal-time-prefix "** "org-journal-time-prefix219,8598
+(defcustom org-journal-hide-entries-p torg-journal-hide-entries-p225,8775
+(defcustom org-journal-enable-encryption nilorg-journal-enable-encryption229,8931
+(defcustom org-journal-encrypt-journal nilorg-journal-encrypt-journal236,9198
+(defcustom org-journal-encrypt-on 'before-save-hookorg-journal-encrypt-on242,9373
+(defcustom org-journal-enable-agenda-integration nilorg-journal-enable-agenda-integration248,9544
+(defcustom org-journal-find-file 'find-file-other-windoworg-journal-find-file252,9715
+(defcustom org-journal-carryover-items "TODO=\"TODO\""org-journal-carryover-items258,9922
+(defcustom org-journal-carryover-items-delete torg-journal-carryover-items-delete264,10152
+(defcustom org-journal-skip-carryover-drawers nilorg-journal-skip-carryover-drawers268,10271
+(defcustom org-journal-carryover-delete-empty-journal 'neverorg-journal-carryover-delete-empty-journal275,10569
+(defcustom org-journal-search-results-order-by :ascorg-journal-search-results-order-by285,10949
+(defcustom org-journal-tag-alist nilorg-journal-tag-alist289,11113
+(defcustom org-journal-tag-persistent-alist nilorg-journal-tag-persistent-alist298,11457
+(defcustom org-journal-search-forward-fn 'search-forwardorg-journal-search-forward-fn308,11927
+(defcustom org-journal-follow-mode nilorg-journal-follow-mode316,12221
+(defcustom org-journal-enable-cache nilorg-journal-enable-cache320,12329
+(defcustom org-journal-file-header ""org-journal-file-header324,12471
+(defcustom org-journal-created-property-timestamp-format "%Y%m%d"org-journal-created-property-timestamp-format335,12837
+(defcustom org-journal-prefix-key "C-c C-"org-journal-prefix-key355,13655
+(defvar org-journal-after-entry-create-hook nilorg-journal-after-entry-create-hook369,14119
+(defvar org-journal-after-header-create-hook nilorg-journal-after-header-create-hook372,14218
+(defvar org-journal--search-buffer "*Org-journal search*")org-journal--search-buffer377,14457
+(define-derived-mode org-journal-mode org-modeorg-journal-mode387,14736
+(define-obsolete-function-alias 'org-journal-open-next-entry 'org-journal-next-entry)org-journal-open-next-entry397,15109
+(define-obsolete-function-alias 'org-journal-open-previous-entry 'org-journal-previous-entry)org-journal-open-previous-entry399,15212
+(defmacro org-journal--with-journal (file &rest body)org-journal--with-journal429,16918
+(defun org-journal-after-save-hook ()org-journal-after-save-hook447,17691
+(defun org-journal-is-journal ()org-journal-is-journal453,17871
+(defun org-journal--dir-and-file-format->pattern ()org-journal--dir-and-file-format->pattern461,18223
+(defvar org-journal--format-rx-alistorg-journal--format-rx-alist467,18487
+(defun org-journal--format->regex (format)org-journal--format->regex474,18755
+(defvar org-journal--created-re "^ *:CREATED: +.*$"  "Regex to find created property.")org-journal--created-re482,19079
+(defun org-journal--search-forward-created (date &optional bound noerror count)org-journal--search-forward-created484,19170
+(defsubst org-journal--daily-p ()org-journal--daily-p494,19545
+(defun org-journal--org-heading-p ()org-journal--org-heading-p498,19682
+(defun org-journal-convert-created-property-timestamps (old-format)org-journal-convert-created-property-timestamps503,19859
+(defun org-journal--convert-time-to-file-type-time (&optional time)org-journal--convert-time-to-file-type-time526,21292
+(defun org-journal--get-entry-path (&optional time)org-journal--get-entry-path569,22955
+(defun org-journal--dir-check-or-create ()org-journal--dir-check-or-create580,23478
+(defun org-journal--set-current-tag-alist ()org-journal--set-current-tag-alist588,23917
+(defun org-journal--calendar-date-compare (date1 date2)org-journal--calendar-date-compare604,24740
+(defun org-journal-new-entry (prefix &optional time)org-journal-new-entry610,24966
+(defvar org-journal--kill-buffer nilorg-journal--kill-buffer747,31431
+(defun org-journal--empty-journal-p (prev-buffer)org-journal--empty-journal-p751,31586
+(defun org-journal--remove-drawer ()org-journal--remove-drawer775,32562
+(defun org-journal--carryover-delete-empty-journal (prev-buffer)org-journal--carryover-delete-empty-journal787,33074
+(defun org-journal-carryover-items (text entries prev-buffer)org-journal-carryover-items813,34385
+(defun org-journal--carryover ()org-journal--carryover866,36397
+(defun org-journal--carryover-item-with-parents ()org-journal--carryover-item-with-parents916,38710
+(defun org-journal--time-entry-level ()org-journal--time-entry-level935,39623
+(defun org-journal--calendar-date->time (date)org-journal--calendar-date->time943,39963
+(defun org-journal--file-name->calendar-date (file-name)org-journal--file-name->calendar-date947,40154
+(defun org-journal--entry-date->calendar-date ()org-journal--entry-date->calendar-date974,41310
+(defun org-journal--file->calendar-dates (file)org-journal--file->calendar-dates988,42034
+(defun org-journal-new-date-entry (prefix &optional event)org-journal-new-date-entry1001,42480
+(defun org-journal-new-scheduled-entry (prefix &optional scheduled-time)org-journal-new-scheduled-entry1018,43335
+(defun org-journal--goto-entry (date)org-journal--goto-entry1030,43827
+(defun org-journal-sort-dates (dates calendar-date prev)org-journal-sort-dates1039,44104
+(defun org-journal--open-entry (&optional prev no-select)org-journal--open-entry1056,44955
+(defun org-journal-open-current-journal-file ()org-journal-open-current-journal-file1094,46733
+(defun org-journal--list-files ()org-journal--list-files1107,47317
+(defconst org-journal--cache-fileorg-journal--cache-file1123,48213
+(defvar org-journal--dates (make-hash-table :test 'equal)org-journal--dates1127,48356
+(defun org-journal-invalidate-cache ()org-journal-invalidate-cache1134,48587
+(defun org-journal--file-modification-time (file)org-journal--file-modification-time1141,48808
+(defun org-journal--dates-puthash (&optional file)org-journal--dates-puthash1144,48896
+(defun org-journal--serialize ()org-journal--serialize1156,49558
+(defun org-journal--deserialize ()org-journal--deserialize1168,50091
+(defvar org-journal--sorted-dates nil)org-journal--sorted-dates1179,50532
+(defun org-journal--sort-dates ()org-journal--sort-dates1181,50574
+(defun org-journal--list-dates ()org-journal--list-dates1185,50811
+(defun org-journal-mark-entries ()org-journal-mark-entries1231,52608
+(defun org-journal-read-entry (_arg &optional event)org-journal-read-entry1244,53261
+(defun org-journal-display-entry (_arg &optional event)org-journal-display-entry1253,53610
+(defun org-journal--finalize-view ()org-journal--finalize-view1261,53953
+(defun org-journal-read-or-display-entry (time &optional noselect)org-journal-read-or-display-entry1273,54271
+(defun org-journal--next-entry (&optional prev)org-journal--next-entry1316,56554
+(defun org-journal-next-entry ()org-journal-next-entry1343,57818
+(defun org-journal-previous-entry ()org-journal-previous-entry1349,57952
+(defun org-journal-search (str &optional period-name)org-journal-search1357,58129
+(defvar org-journal-search-history nil)org-journal-search-history1373,58909
+(defun org-journal-search-calendar-week (str)org-journal-search-calendar-week1376,58968
+(defun org-journal-search-calendar-month (str)org-journal-search-calendar-month1384,59250
+(defun org-journal-search-calendar-year (str)org-journal-search-calendar-year1392,59535
+(defun org-journal-search-forever (str)org-journal-search-forever1400,59817
+(defun org-journal-search-future (str)org-journal-search-future1408,60071
+(defun org-journal-search-future-scheduled ()org-journal-search-future-scheduled1416,60330
+(defmacro org-journal--with-find-file (file &rest body)org-journal--with-find-file1422,60547
+(defun org-journal--update-org-agenda-files ()org-journal--update-org-agenda-files1441,61198
+(defvar org-journal--schedule-buffer-name "*Org-journal schedule*")org-journal--schedule-buffer-name1464,62480
+(defun org-journal-schedule-view ()org-journal-schedule-view1466,62551
+(defun org-journal--read-period (period-name)org-journal--read-period1525,64966
+(defun org-journal--search-by-string (str &optional period-start period-end)org-journal--search-by-string1588,67684
+(defun org-journal--search-build-file-list (period-start period-end)org-journal--search-build-file-list1609,68658
+(defun org-journal--search-do-search (str files)org-journal--search-do-search1655,70964
+(defun org-journal--search-format-date (time)org-journal--search-format-date1690,72717
+(defun org-journal--search-next ()org-journal--search-next1694,72905
+(defun org-journal--search-prev ()org-journal--search-prev1699,73026
+(defvar org-journal-search-mode-map nilorg-journal-search-mode-map1704,73148
+(define-derived-mode org-journal-search-mode special-modeorg-journal-search-mode1717,73744
+(defun org-journal--search-print-results (str results period-start period-end)org-journal--search-print-results1726,74045
+(defun org-journal--search-follow-link-action (button)org-journal--search-follow-link-action1750,75205
+(defun org-journal-re-encrypt-journals (recipient)org-journal-re-encrypt-journals1758,75557
+(defun org-journal--decrypt ()org-journal--decrypt1795,76802
+(defun org-journal-encryption-hook ()org-journal-encryption-hook1801,76979
+
+/home/jonathan/MyRepos/org-journal/TAGS,0
